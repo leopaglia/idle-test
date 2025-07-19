@@ -20,7 +20,7 @@ public class Coin : MonoBehaviour
 
         collected = true;
 
-        CurrencyManager.Instance.AddCurrency(value);
+        ProgressionManager.Instance.AddCoins(value);
         Destroy(gameObject);
     }
 }

@@ -44,6 +44,8 @@ public class Enemy : MonoBehaviour
     {
         DropCoin();
 
+        ProgressionManager.Instance.EnemyKilled();
+
         Destroy(healthBar.gameObject);
 
         Destroy(gameObject);

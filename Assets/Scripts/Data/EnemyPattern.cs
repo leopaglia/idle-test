@@ -6,5 +6,7 @@ public class EnemyPattern: ScriptableObject
     public GameObject enemyPrefab;
     public Vector2[] spawnOffsets;
     public MovementPattern movementPattern;
-    public float delayBeforeNextWave;
+
+    [Range(1, 100)]
+    public int weight = 10; // Probability of random selection
 }

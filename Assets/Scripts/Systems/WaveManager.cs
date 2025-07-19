@@ -4,10 +4,11 @@ using System.Collections.Generic;
 
 public class WaveManager : Singleton<WaveManager>
 {
+    public List<EnemyPattern> patterns;
     public Transform enemyGroupAnchor;
     public TextMeshProUGUI waveText;
 
-    public List<EnemyPattern> patterns;
+    public float delaySecondsBetweenWaves = 2f;
 
     private int currentWave = 0;
     private bool waveCleared = false;
@@ -23,26 +24,38 @@ public class WaveManager : Singleton<WaveManager>
         if (!waveCleared && enemyGroupAnchor.childCount == 0)
         {
             waveCleared = true;
-
-            float delay = patterns[currentWave - 1].delayBeforeNextWave;
-            Invoke(nameof(SpawnNextWave), delay);
+            Invoke(nameof(SpawnNextWave), delaySecondsBetweenWaves);
         }
     }
 
     private void SpawnNextWave()
     {
-        if (currentWave >= patterns.Count)
+        currentWave++;
+        UpdateWaveText();
+
+        EnemyPattern selectedPattern = GetWeightedRandomPattern();
+        SpawnFromPattern(selectedPattern);
+
+        waveCleared = false;
+    }
+
+    private EnemyPattern GetWeightedRandomPattern()
+    {
+        int totalWeight = 0;
+        foreach (var pattern in patterns)
+            totalWeight += pattern.weight;
+
+        int random = Random.Range(0, totalWeight);
+        int cumulative = 0;
+
+        foreach (var pattern in patterns)
         {
-            Debug.Log("All waves complete!");
-            return;
+            cumulative += pattern.weight;
+            if (random < cumulative)
+                return pattern;
         }
 
-        EnemyPattern pattern = patterns[currentWave];
-        SpawnFromPattern(pattern);
-
-        currentWave++;
-        waveCleared = false;
-        UpdateWaveText();
+        return patterns[0];
     }
 
     private void SpawnFromPattern(EnemyPattern pattern)
@@ -61,8 +74,6 @@ public class WaveManager : Singleton<WaveManager>
     private void UpdateWaveText()
     {
         if (waveText != null)
-        {
             waveText.text = $"Wave {currentWave}";
-        }
     }
 }

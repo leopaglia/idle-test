@@ -2,11 +2,10 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public int damage = 1;
-    public float speed = 10f;
+    public int damage;
 
-    void Update()
+    public void Initialize(int damage)
     {
-        transform.Translate(Vector3.up * speed * Time.deltaTime);
+        this.damage = damage;
     }
 }
