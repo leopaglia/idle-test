@@ -9,9 +9,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e471bd2b8983264eaf14ed4a87b2b2b, type: 3}
+  m_Script: {fileID: 11500000, guid: b3d6a5c7eb47f574580017269f39c95e, type: 3}
   m_Name: BasicWeapon
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 0}
+  weaponID: 0
+  bulletPrefab: {fileID: 132308598146420404, guid: 68ac1206a7231bb438d09eea577a6f77, type: 3}
+  upgradeTiers:
+  - cooldown: 0.3
+    bulletsPerShot: 1
+    bulletSpeed: 10
+    bulletDamage: 1
+    cost: 0
+  - cooldown: 0.3
+    bulletsPerShot: 1
+    bulletSpeed: 20
+    bulletDamage: 1
+    cost: 10
+  - cooldown: 0.15
+    bulletsPerShot: 1
+    bulletSpeed: 25
+    bulletDamage: 2
+    cost: 25
+  - cooldown: 0.15
+    bulletsPerShot: 2
+    bulletSpeed: 25
+    bulletDamage: 2
+    cost: 50
+  - cooldown: 0.15
+    bulletsPerShot: 3
+    bulletSpeed: 25
+    bulletDamage: 2
+    cost: 100
   spreadAngle: 3
-  upgradeTiers: []

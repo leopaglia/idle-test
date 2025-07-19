@@ -1,3 +1,4 @@
+using UnityEngine;
 using TMPro;
 
 public class ProgressionManager : Singleton<ProgressionManager>
@@ -13,6 +14,12 @@ public class ProgressionManager : Singleton<ProgressionManager>
     public void AddCoins(int amount)
     {
         playerProgress.coins += amount;
+        UpdateUI();
+    }
+
+    public void SpendCoins(int amount)
+    {
+        playerProgress.coins = Mathf.Max(0, playerProgress.coins - amount);
         UpdateUI();
     }
 

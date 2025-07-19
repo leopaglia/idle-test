@@ -18,5 +18,16 @@ public class DebugController : MonoBehaviour
             var weaponID = player.equippedWeapon.ID;
             UpgradesManager.Instance.DowngradeWeapon(weaponID);
         }
+
+        if (Keyboard.current.oKey.wasPressedThisFrame)
+        {
+            var weaponID = player.equippedWeapon.ID;
+            UpgradesManager.Instance.TryPurchaseUpgrade(weaponID);
+        }
+
+        if(Keyboard.current.pKey.wasPressedThisFrame)
+        {
+            ProgressionManager.Instance.AddCoins(50);
+        }
     }
 }

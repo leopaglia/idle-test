@@ -5,4 +5,5 @@ public class WeaponUpgradeTier
     public int bulletsPerShot;
     public float bulletSpeed;
     public int bulletDamage;
+    public int cost;
 }
