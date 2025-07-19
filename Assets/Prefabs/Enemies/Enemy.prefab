@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1865801332032170468}
   - component: {fileID: 6000178338567105607}
   - component: {fileID: 6564923102930125729}
+  - component: {fileID: 1521857232768517680}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -179,3 +180,15 @@ MonoBehaviour:
   healthBarPrefab: {fileID: 8638431696587339407, guid: 60d6bdeb8c8e5dc4aa5319d8d470052d, type: 3}
   coinPrefab: {fileID: 8877097853932733855, guid: 3bc9e4dc88aaf334493ec414ed9c791d, type: 3}
   currencyDropValue: 1
+--- !u!114 &1521857232768517680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6503636049965212400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5b311211bedb20409b5a18d89856722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
