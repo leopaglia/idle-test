@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: da8c7df90fe7c1b4a9f32760bfed941f
+guid: 066e93d4e8dc84441b77fc3d38d6ff45
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -339282135091374098
-    second: Ball_02_0
+      213: -2023126844081633735
+    second: Short-Lazer-Ship_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ball_02_0
+      name: Short-Lazer-Ship_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 20
-        width: 81
-        height: 81
+        x: 0
+        y: 65
+        width: 1024
+        height: 897
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee71e3b12b0aa4bf0800000000000000
-      internalID: -339282135091374098
+      spriteID: 93605f2bad86ce3e0800000000000000
+      internalID: -2023126844081633735
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Ball_02_0: -339282135091374098
+      Short-Lazer-Ship_0: -2023126844081633735
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
